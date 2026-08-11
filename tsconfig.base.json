@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {},
     "strict": true,
+    "ignoreDeprecations": "6.0",
     "noImplicitOverride": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,

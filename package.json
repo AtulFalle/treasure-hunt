@@ -15,6 +15,7 @@
     "@nestjs/core": "^11.0.0",
     "@nestjs/platform-express": "^11.0.0",
     "axios": "^1.6.0",
+    "mapillary-js": "^4.1.2",
     "reflect-metadata": "^0.2.0",
     "rxjs": "~7.8.0",
     "zone.js": "~0.16.0"
@@ -37,6 +38,7 @@
     "@nx/node": "23.1.1",
     "@nx/web": "23.1.1",
     "@nx/webpack": "23.1.1",
+    "@nxlv/python": "^23.0.0",
     "@schematics/angular": "~22.0.4",
     "@swc-node/register": "~1.11.1",
     "@swc/core": "~1.15.8",

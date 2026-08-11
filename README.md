@@ -2,6 +2,20 @@
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
+## Treasure Hunt POC
+
+Solo street-view treasure hunt (Angular + NestJS + Python). See **[apps/py-geo/README.md](apps/py-geo/README.md)** for how to run all three apps.
+
+```sh
+npx nx serve apps/py-geo   # map packs :8000
+npx nx serve nest-api      # game API  :3000/api
+npx nx serve web-ui        # UI        :4200
+```
+
+Set `mapillaryAccessToken` in `apps/web-ui/src/app/environment.ts` before starting.
+
+---
+
 ✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
 
 [Learn more about this workspace setup and its capabilities](https://nx.dev/docs/technologies/typescript/introduction?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!

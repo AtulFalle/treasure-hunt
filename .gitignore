@@ -57,3 +57,7 @@ Thumbs.db
 .gemini/*
 .opencode/*
 .angular
+
+# Python
+**/__pycache__/
+**/.venv/

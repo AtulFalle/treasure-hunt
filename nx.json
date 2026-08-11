@@ -53,6 +53,9 @@
       "options": {
         "targetName": "eslint:lint"
       }
+    },
+    {
+      "plugin": "@nxlv/python"
     }
   ]
 }

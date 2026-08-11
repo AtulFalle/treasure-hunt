@@ -1,0 +1,44 @@
+<div class="game">
+  @if (!started()) {
+    <div class="game__intro">
+      <h1>Treasure Hunt</h1>
+      <p>
+        Read each puzzle, walk with the arrows to the place that matches, then
+        press Interact.
+      </p>
+      @if (tokenMissing()) {
+        <p class="game__warn">
+          Add your Mapillary client access token in
+          <code>apps/web-ui/src/app/environment.ts</code>
+        </p>
+      }
+      <button type="button" (click)="startGame()" [disabled]="loading()">
+        {{ loading() ? 'Starting…' : 'Start game' }}
+      </button>
+      @if (statusMessage()) {
+        <p class="game__status">{{ statusMessage() }}</p>
+      }
+    </div>
+  } @else {
+    <div class="game__viewer" #viewerHost></div>
+    <div class="game__hud">
+      <div class="game__clue">
+        <span class="game__step">{{ stepLabel() }}</span>
+        <p>{{ clueText() }}</p>
+      </div>
+      <button
+        type="button"
+        class="game__interact"
+        (click)="interact()"
+        [disabled]="loading() || won()"
+      >
+        Interact
+      </button>
+      @if (statusMessage()) {
+        <p class="game__status" [class.game__status--win]="won()">
+          {{ statusMessage() }}
+        </p>
+      }
+    </div>
+  }
+</div>
